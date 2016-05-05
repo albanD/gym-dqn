@@ -102,7 +102,7 @@ function trans:fill_buffer()
     local ind
     for buf_ind=1,self.bufferSize do
         local s, a, r, s2, term = self:sample_one(1)
-        self.buf_s[buf_ind]:copy(s)
+        self.buf_s[buf_ind] = s
         self.buf_a[buf_ind] = a
         self.buf_r[buf_ind] = r
         self.buf_s2[buf_ind]:copy(s2)
